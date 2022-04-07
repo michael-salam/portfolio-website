@@ -1,0 +1,60 @@
+@import "./variables";
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+.button {
+  padding: 15px 25px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-image: linear-gradient(to right, $accentLight, $accentDark);
+  box-shadow: 0px 0px 4px -1px $primaryDark;
+  color: $white;
+  border-radius: 10px;
+  border: 2px solid $accentDark;
+  display: inline-block;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 2px 5px -1px $primaryDark;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0px 0px 4px -1px $primaryDark;
+    transform: translate(0);
+  }
+}
+
+p {
+  line-height: 26px;
+}

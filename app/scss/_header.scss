@@ -1,0 +1,63 @@
+.header {
+  background-image: url(../../images/hero-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0px 0.875rem;
+
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.874rem 0;
+
+    &__logo {
+      position: relative;
+      height: 3.5rem;
+      //   height: 6.875rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        height: 16px;
+        width: 3px;
+        background-color: $primaryDark;
+        animation: pulse 350ms ease-in-out alternate infinite;
+      }
+
+      img {
+        height: 100%;
+      }
+    }
+
+    &__menu {
+      height: 80%;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  &__text {
+    text-align: left;
+
+    h1 {
+      font-size: $font-lg;
+      color: $primaryDark;
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+    }
+
+    p {
+      color: $primaryLight;
+      margin-bottom: 2.25rem;
+    }
+  }
+
+  .button {
+    margin-bottom: 3.375rem;
+  }
+}
