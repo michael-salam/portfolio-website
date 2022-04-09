@@ -1,0 +1,121 @@
+.menu {
+  padding: 2rem;
+  background: linear-gradient(to bottom right, $gradientLight, $gradientDark);
+  backdrop-filter: blur(3px);
+  position: fixed;
+  top: 0.875rem;
+  width: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include breakpoint-up(large) {
+    position: static;
+    flex: 1;
+    transform: translateX(0);
+    max-width: 33rem;
+  }
+
+  &.invisible {
+    opacity: 0;
+    display: none;
+
+    @include breakpoint-up(large) {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  .close-btn {
+    text-align: right;
+    opacity: 0.75;
+
+    @include breakpoint-up(large) {
+      display: none;
+    }
+  }
+
+  &__tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5.75rem, 1fr));
+    justify-items: center;
+    gap: 0.875rem;
+    padding: 0.875rem 0;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+      gap: 2rem;
+    }
+
+    &__tile {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 6rem;
+      width: 6rem;
+      padding: 1rem;
+      background-color: $primaryDark;
+      transition: all 150ms ease-in-out;
+
+      &:hover {
+        background-color: lighten($primaryDark, 10%);
+        transform: scale(1.05);
+      }
+
+      @include breakpoint-up(large) {
+        height: 7rem;
+        width: 7rem;
+      }
+
+      .icon {
+        height: 70%;
+        img {
+          height: 100%;
+        }
+      }
+
+      .text {
+        color: $primaryModeratelyLight1;
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        @include breakpoint-up(large) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    width: 90%;
+    margin: 0 auto 2rem auto;
+
+    @include breakpoint-up(large) {
+      margin: 0 auto;
+      width: 95%;
+    }
+
+    .icon {
+      height: 2.75rem;
+      transition: all 150ms ease-in-out;
+
+      &:hover {
+        transform: scale(1.12);
+      }
+
+      @include breakpoint-up(large) {
+        height: 4rem;
+      }
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+}

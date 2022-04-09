@@ -1,20 +1,38 @@
 .header {
-  background-image: url(../../images/hero-bg.jpg);
+  background-image: url(../images/hero-bg.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 0px 0.875rem;
+  padding: 6.5rem 0.875rem 0 0.875rem;
+
+  @include breakpoint-up(large) {
+    padding: 8rem 3rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   &__navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.874rem 0;
+    padding-top: 0.874rem;
+    padding-bottom: 1.25rem;
+    position: fixed;
+    top: 0;
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
 
     &__logo {
       position: relative;
       height: 3.5rem;
       //   height: 6.875rem;
+
+      @include breakpoint-up(large) {
+        height: 5.25rem;
+      }
 
       &::after {
         content: "";
@@ -25,6 +43,13 @@
         width: 3px;
         background-color: $primaryDark;
         animation: pulse 350ms ease-in-out alternate infinite;
+
+        @include breakpoint-up(large) {
+          top: 30px;
+          right: 42px;
+          height: 24px;
+          width: 5px;
+        }
       }
 
       img {
@@ -32,32 +57,79 @@
       }
     }
 
-    &__menu {
-      height: 80%;
+    &__menu-icon {
+      height: 40px;
+      width: 40px;
+      border-radius: 20%;
+      border: 2px solid $primaryLight;
+      padding: 0.325rem;
 
       img {
         height: 100%;
       }
+
+      @include breakpoint-up(large) {
+        display: none;
+      }
     }
   }
 
-  &__text {
-    text-align: left;
-
-    h1 {
-      font-size: $font-lg;
-      color: $primaryDark;
-      margin-bottom: 2rem;
-      margin-top: 1rem;
+  &__content {
+    @include breakpoint-up(large) {
+      width: 95%;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    p {
-      color: $primaryLight;
-      margin-bottom: 2.25rem;
-    }
-  }
+    &__text {
+      text-align: left;
+      flex: 1;
 
-  .button {
-    margin-bottom: 3.375rem;
+      @include breakpoint-up(large) {
+        padding-right: 3rem;
+      }
+
+      @include breakpoint-down(medium) {
+        width: 70%;
+        text-align: center;
+        margin: auto;
+      }
+      @include breakpoint-down(xsmall) {
+        width: 100%;
+        text-align: left;
+      }
+
+      h1 {
+        font-size: $font-lg;
+        color: $primaryDark;
+        margin-bottom: 2rem;
+        line-height: 1;
+
+        @include breakpoint-up(xlarge) {
+          font-size: $font-xlg;
+        }
+      }
+
+      p {
+        color: $primaryLight;
+        margin-bottom: 2.25rem;
+
+        @include breakpoint-up(xlarge) {
+          font-size: $font-xsm;
+          line-height: 1.6;
+          width: 70%;
+        }
+      }
+    }
+
+    .button {
+      margin-bottom: 3.375rem;
+
+      @include breakpoint-up(large) {
+        margin-bottom: 0;
+      }
+    }
   }
 }
