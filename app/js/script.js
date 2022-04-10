@@ -2,11 +2,17 @@ const body = document.querySelector("body");
 const menuIcon = document.querySelector("#menu-icon");
 const menu = document.querySelector("#menu");
 const closeBtn = document.querySelector("#close-btn");
+const navbar = document.querySelector("#navbar");
+const allMenuLinks = document.querySelectorAll("#menu a"); // select all the links in the menu
 
 menuIcon.addEventListener("click", handleOpenMenu);
 closeBtn.addEventListener("click", handleCloseMenu);
+window.addEventListener("scroll", handleAddNavbarBg);
+allMenuLinks.forEach(function (element) {
+  element.addEventListener("click", handleCloseMenu);
+});
 
-// logic to open the responsive menu
+// function to open the responsive menu
 function handleOpenMenu() {
   menu.classList.remove("invisible");
   menu.classList.remove("close");
@@ -14,11 +20,18 @@ function handleOpenMenu() {
   body.classList.add("no-scroll");
 }
 
-// logic to close the responsive menu
+// function to close the responsive menu
 function handleCloseMenu() {
   menu.classList.replace("open", "close");
   setTimeout(() => {
     menu.classList.add("invisible");
   }, 200);
   body.classList.remove("no-scroll");
+}
+
+// the following function adds a background to the navbar depending on how much the user scrolls down from the top of the page
+function handleAddNavbarBg() {
+  window.pageYOffset > 80
+    ? navbar.classList.add("has-bg", "shadow-radius")
+    : navbar.classList.remove("has-bg", "shadow-radius");
 }

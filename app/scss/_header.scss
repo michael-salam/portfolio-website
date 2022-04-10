@@ -17,13 +17,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0.874rem;
-    padding-bottom: 1.25rem;
+    padding: 0rem 1rem;
     position: fixed;
     top: 0;
-    width: 95%;
+    width: 98%;
     left: 50%;
     transform: translateX(-50%);
+    transition: all 300ms ease-in-out;
 
     &__logo {
       position: relative;
@@ -113,11 +113,10 @@
       }
 
       p {
-        color: $primaryLight;
         margin-bottom: 2.25rem;
 
         @include breakpoint-up(xlarge) {
-          font-size: $font-xsm;
+          font-size: $font-sm;
           line-height: 1.6;
           width: 70%;
         }

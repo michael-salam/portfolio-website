@@ -4,6 +4,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -17,6 +18,9 @@ html {
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   height: 500vh;
+  background-image: url(../images/drops.svg);
+  background-position: center;
+  background-size: contain;
 
   &.no-scroll {
     overflow-y: hidden;
@@ -28,6 +32,43 @@ h2,
 h3 {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
+  color: $primaryDark;
+}
+
+p {
+  color: $primaryLight;
+  line-height: 1.8;
+
+  @include breakpoint-up(xlarge) {
+    font-size: $font-xsm;
+  }
+}
+
+h2 {
+  position: relative;
+  display: inline-block;
+  font-size: 1.75rem;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -0.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 5px;
+    background: linear-gradient(to right, $accentLight, $accentDark);
+    border-radius: 20px;
+  }
+
+  @include breakpoint-up(xlarge) {
+    font-size: $font-xlg;
+  }
+}
+
+h3 {
+  @include breakpoint-up(xlarge) {
+    font-size: $font-sm;
+  }
 }
 
 a,
@@ -39,6 +80,13 @@ a:hover {
 .shadow-radius {
   box-shadow: 0px 0px 4px -1px $primaryDark;
   border-radius: 10px;
+}
+
+.has-bg {
+  background-color: #312a41;
+  z-index: 20;
+  backdrop-filter: blur(8px);
+  margin-top: 0.5rem;
 }
 
 .button {

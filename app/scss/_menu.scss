@@ -15,6 +15,10 @@
     max-width: 33rem;
   }
 
+  @include breakpoint-down(medium) {
+    z-index: 20;
+  }
+
   &.invisible {
     opacity: 0;
     display: none;

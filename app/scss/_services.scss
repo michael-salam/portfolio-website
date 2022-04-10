@@ -1,4 +1,33 @@
 .services {
+  padding: 3.375rem 1rem;
   text-align: center;
-  margin-top: 3.375rem;
+  // background-image: url(../images/drops.svg);
+  // background-position: center;
+  // background-size: contain;
+
+  .sect-1,
+  .sect-2 {
+    @include breakpoint-up(medium) {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      // width: 80%;
+    }
+
+    @include breakpoint-up(small) {
+      width: 80%;
+      margin: auto;
+    }
+  }
+  .service {
+    margin-top: 2rem;
+    @include breakpoint-up(medium) {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    p {
+      margin-top: 0.5rem;
+    }
+  }
 }

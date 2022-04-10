@@ -2,6 +2,7 @@ html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -16,6 +17,9 @@ html {
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   height: 500vh;
+  background-image: url(../images/drops.svg);
+  background-position: center;
+  background-size: contain;
 }
 
 body.no-scroll {
@@ -27,6 +31,50 @@ h2,
 h3 {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
+  color: #312a41;
+}
+
+p {
+  color: #685f7e;
+  line-height: 1.8;
+}
+
+@media (min-width: 75em) {
+  p {
+    font-size: 1.25rem;
+  }
+}
+
+h2 {
+  position: relative;
+  display: inline-block;
+  font-size: 1.75rem;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -0.25rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 60%;
+  height: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#ffb27b), to(#fd8745));
+  background: linear-gradient(to right, #ffb27b, #fd8745);
+  border-radius: 20px;
+}
+
+@media (min-width: 75em) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 75em) {
+  h3 {
+    font-size: 1.5rem;
+  }
 }
 
 a,
@@ -39,6 +87,14 @@ a:hover {
   -webkit-box-shadow: 0px 0px 4px -1px #312a41;
           box-shadow: 0px 0px 4px -1px #312a41;
   border-radius: 10px;
+}
+
+.has-bg {
+  background-color: #312a41;
+  z-index: 20;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  margin-top: 0.5rem;
 }
 
 .button {
@@ -198,14 +254,15 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 0.874rem;
-  padding-bottom: 1.25rem;
+  padding: 0rem 1rem;
   position: fixed;
   top: 0;
-  width: 95%;
+  width: 98%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .header__navbar__logo {
@@ -320,13 +377,12 @@ a:hover {
 }
 
 .header__content__text p {
-  color: #685f7e;
   margin-bottom: 2.25rem;
 }
 
 @media (min-width: 75em) {
   .header__content__text p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     line-height: 1.6;
     width: 70%;
   }
@@ -343,8 +399,48 @@ a:hover {
 }
 
 .services {
+  padding: 3.375rem 1rem;
   text-align: center;
-  margin-top: 3.375rem;
+}
+
+@media (min-width: 54.75em) {
+  .services .sect-1,
+  .services .sect-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+}
+
+@media (min-width: 31.25em) {
+  .services .sect-1,
+  .services .sect-2 {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.services .service {
+  margin-top: 2rem;
+}
+
+@media (min-width: 54.75em) {
+  .services .service {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 2rem;
+  }
+}
+
+.services .service p {
+  margin-top: 0.5rem;
 }
 
 .menu {
@@ -370,6 +466,12 @@ a:hover {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     max-width: 33rem;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .menu {
+    z-index: 20;
   }
 }
 
