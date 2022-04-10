@@ -18,7 +18,7 @@ html {
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   height: 500vh;
-  background-image: url(../images/drops.svg);
+  background-image: url(../images/body-bg.svg);
   background-position: center;
   background-size: contain;
 
@@ -41,6 +41,7 @@ p {
 
   @include breakpoint-up(xlarge) {
     font-size: $font-xsm;
+    line-height: 1.6;
   }
 }
 
@@ -51,11 +52,11 @@ h2 {
   &::after {
     content: "";
     position: absolute;
-    bottom: -0.25rem;
+    bottom: -0.5rem;
     left: 50%;
     transform: translateX(-50%);
     width: 60%;
-    height: 5px;
+    height: 8px;
     background: linear-gradient(to right, $accentLight, $accentDark);
     border-radius: 20px;
   }
@@ -83,10 +84,14 @@ a:hover {
 }
 
 .has-bg {
-  background-color: #312a41;
+  background-color: #312a4133;
+  // background-color: transparent;
   z-index: 20;
   backdrop-filter: blur(8px);
-  margin-top: 0.5rem;
+  box-shadow: 0px 2px 10px -1px #312a4199;
+
+  // @include breakpoint-up(xlarge) {
+  // }
 }
 
 .button {

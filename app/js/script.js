@@ -32,6 +32,6 @@ function handleCloseMenu() {
 // the following function adds a background to the navbar depending on how much the user scrolls down from the top of the page
 function handleAddNavbarBg() {
   window.pageYOffset > 80
-    ? navbar.classList.add("has-bg", "shadow-radius")
-    : navbar.classList.remove("has-bg", "shadow-radius");
+    ? navbar.classList.add("has-bg")
+    : navbar.classList.remove("has-bg");
 }

@@ -20,7 +20,7 @@
     padding: 0rem 1rem;
     position: fixed;
     top: 0;
-    width: 98%;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
     transition: all 300ms ease-in-out;
@@ -117,8 +117,8 @@
 
         @include breakpoint-up(xlarge) {
           font-size: $font-sm;
-          line-height: 1.6;
-          width: 70%;
+          line-height: 1.4;
+          width: 80%;
         }
       }
     }

@@ -1,5 +1,5 @@
 .services {
-  padding: 3.375rem 1rem;
+  margin: 5rem 1rem;
   text-align: center;
   // background-image: url(../images/drops.svg);
   // background-position: center;
@@ -22,12 +22,14 @@
   .service {
     margin-top: 2rem;
     @include breakpoint-up(medium) {
+      text-align: left;
       flex: 1;
       padding: 2rem;
     }
 
     p {
-      margin-top: 0.5rem;
+      margin-top: 1rem;
+      color: $primaryModeratelyLight2;
     }
   }
 }
