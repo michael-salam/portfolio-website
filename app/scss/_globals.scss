@@ -78,6 +78,17 @@ a:hover {
   text-decoration: none;
 }
 
+a.link {
+  color: $primaryModeratelyLight1;
+  font-weight: 700;
+  transition: all 70ms;
+
+  &:hover {
+    color: $accentLight;
+    text-decoration: underline;
+  }
+}
+
 .shadow-radius {
   box-shadow: 0px 0px 4px -1px $primaryDark;
   border-radius: 10px;
@@ -103,6 +114,7 @@ a:hover {
   // background-color: $accentDark;
   color: $white;
   // border: 2px solid $accentDark;
+  border: none;
   border-radius: 10px;
   display: inline-block;
   transition: all 200ms ease-in-out;
@@ -120,5 +132,58 @@ a:hover {
   &:active {
     box-shadow: 0px 0px 4px -1px $primaryDark;
     transform: translate(0);
+  }
+}
+
+.why-work-with-me,
+.get-in-touch {
+  text-align: center;
+  &__container {
+    width: 80%;
+    margin: 3rem auto;
+
+    @include breakpoint-up(large) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .image {
+      width: 100%;
+
+      @include breakpoint-up(large) {
+        flex: 1;
+        order: 2;
+        padding: 1rem;
+      }
+
+      img {
+        border-radius: 10px;
+        width: 100%;
+      }
+    }
+
+    .text {
+      @include breakpoint-up(large) {
+        flex: 1;
+        text-align: left;
+        padding: 1rem;
+      }
+      p {
+        // padding: 2rem 0;
+
+        @include breakpoint-up(large) {
+          order: 1;
+          padding: 0;
+        }
+      }
+
+      a {
+        margin-top: 2rem;
+        @include breakpoint-up(large) {
+          font-size: 0.875rem;
+        }
+      }
+    }
   }
 }

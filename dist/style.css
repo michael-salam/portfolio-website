@@ -84,6 +84,18 @@ a:hover {
   text-decoration: none;
 }
 
+a.link {
+  color: #dfdfdf;
+  font-weight: 700;
+  -webkit-transition: all 70ms;
+  transition: all 70ms;
+}
+
+a.link:hover {
+  color: #ffb27b;
+  text-decoration: underline;
+}
+
 .shadow-radius {
   -webkit-box-shadow: 0px 0px 4px -1px #312a41;
           box-shadow: 0px 0px 4px -1px #312a41;
@@ -107,6 +119,7 @@ a:hover {
   background-image: -webkit-gradient(linear, left top, right top, from(#ffb27b), to(#fd8745));
   background-image: linear-gradient(to right, #ffb27b, #fd8745);
   color: #ffffff;
+  border: none;
   border-radius: 10px;
   display: inline-block;
   -webkit-transition: all 200ms ease-in-out;
@@ -132,6 +145,89 @@ a:hover {
           box-shadow: 0px 0px 4px -1px #312a41;
   -webkit-transform: translate(0);
           transform: translate(0);
+}
+
+.why-work-with-me,
+.get-in-touch {
+  text-align: center;
+}
+
+.why-work-with-me__container,
+.get-in-touch__container {
+  width: 80%;
+  margin: 3rem auto;
+}
+
+@media (min-width: 64em) {
+  .why-work-with-me__container,
+  .get-in-touch__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.why-work-with-me__container .image,
+.get-in-touch__container .image {
+  width: 100%;
+}
+
+@media (min-width: 64em) {
+  .why-work-with-me__container .image,
+  .get-in-touch__container .image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 1rem;
+  }
+}
+
+.why-work-with-me__container .image img,
+.get-in-touch__container .image img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+@media (min-width: 64em) {
+  .why-work-with-me__container .text,
+  .get-in-touch__container .text {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: left;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .why-work-with-me__container .text p,
+  .get-in-touch__container .text p {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    padding: 0;
+  }
+}
+
+.why-work-with-me__container .text a,
+.get-in-touch__container .text a {
+  margin-top: 2rem;
+}
+
+@media (min-width: 64em) {
+  .why-work-with-me__container .text a,
+  .get-in-touch__container .text a {
+    font-size: 0.875rem;
+  }
 }
 
 @-webkit-keyframes pulse {
@@ -629,6 +725,10 @@ a:hover {
   margin: 2rem 1rem 0 1rem;
 }
 
+.projects > p a {
+  color: #908b99;
+}
+
 .projects__container {
   display: -ms-grid;
   display: grid;
@@ -636,7 +736,7 @@ a:hover {
       grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  gap: 5rem;
+  gap: 3rem;
   width: 80%;
   margin: 2rem auto;
 }
@@ -688,16 +788,54 @@ a:hover {
 }
 
 .projects__container .project .links a {
-  color: #dfdfdf;
   margin-right: 1rem;
-  -webkit-transition: all 50ms;
-  transition: all 50ms;
   font-size: 0.875rem;
 }
 
-.projects__container .project .links a:hover {
-  color: #ffb27b;
-  font-weight: 700;
-  text-decoration: underline;
+.get-in-touch {
+  margin-top: 7rem;
+}
+
+.get-in-touch h3 {
+  margin: 1rem 0;
+}
+
+.get-in-touch a {
+  color: #312a41;
+}
+
+@media (min-width: 64em) {
+  .get-in-touch__container .text {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+.get-in-touch__mailing-list {
+  margin-top: 1rem;
+}
+
+.get-in-touch__mailing-list form {
+  padding: 1rem;
+  margin-top: 1rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(#b38fff99), to(#312a4199));
+  background: linear-gradient(to bottom right, #b38fff99, #312a4199);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+
+.get-in-touch__mailing-list form input {
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #312a41;
+  padding: 1rem;
+  width: 100%;
+}
+
+.get-in-touch__mailing-list form button {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 0.875rem;
 }
 /*# sourceMappingURL=style.css.map */

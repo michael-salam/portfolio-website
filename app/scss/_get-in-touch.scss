@@ -1,0 +1,47 @@
+.get-in-touch {
+  margin-top: 7rem;
+  h3 {
+    margin: 1rem 0;
+  }
+
+  a {
+    color: $primaryDark;
+  }
+
+  &__container {
+    .text {
+      @include breakpoint-up(large) {
+        order: 3;
+      }
+    }
+  }
+
+  &__mailing-list {
+    margin-top: 1rem;
+
+    form {
+      padding: 1rem;
+      margin-top: 1rem;
+      background: linear-gradient(
+        to bottom right,
+        $gradientLight,
+        $gradientDark
+      );
+      backdrop-filter: blur(3px);
+
+      input {
+        background-color: $white;
+        border-radius: 10px;
+        border: 1px solid $primaryDark;
+        padding: 1rem;
+        width: 100%;
+      }
+
+      button {
+        width: 100%;
+        margin-top: 1rem;
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
