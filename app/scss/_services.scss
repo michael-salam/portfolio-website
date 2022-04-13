@@ -22,7 +22,6 @@
   .service {
     margin-top: 2rem;
     @include breakpoint-up(medium) {
-      text-align: left;
       flex: 1;
       padding: 2rem;
     }

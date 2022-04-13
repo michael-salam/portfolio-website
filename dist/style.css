@@ -704,7 +704,6 @@ a.link:hover {
 
 @media (min-width: 54.75em) {
   .services .service {
-    text-align: left;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
