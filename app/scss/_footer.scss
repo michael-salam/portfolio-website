@@ -22,6 +22,7 @@
     margin-top: 2rem;
     @include breakpoint-up(medium) {
       flex: 2;
+      margin-top: 0;
     }
     a {
       display: block;
@@ -43,6 +44,7 @@
   &__socials {
     @include breakpoint-up(medium) {
       flex: 2;
+      margin-right: 5rem;
     }
     .icons {
       width: 80%;

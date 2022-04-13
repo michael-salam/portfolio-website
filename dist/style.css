@@ -877,6 +877,7 @@ a.link:hover {
     -webkit-box-flex: 2;
         -ms-flex: 2;
             flex: 2;
+    margin-top: 0;
   }
 }
 
@@ -906,6 +907,7 @@ a.link:hover {
     -webkit-box-flex: 2;
         -ms-flex: 2;
             flex: 2;
+    margin-right: 5rem;
   }
 }
 
