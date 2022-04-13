@@ -105,6 +105,39 @@ a.link {
   // }
 }
 
+.logo {
+  position: relative;
+  height: 3.5rem;
+  display: inline-block;
+  //   height: 6.875rem;
+
+  @include breakpoint-up(large) {
+    height: 5.25rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    height: 16px;
+    width: 3px;
+    background-color: $white;
+    animation: pulse 350ms ease-in-out alternate infinite;
+
+    @include breakpoint-up(large) {
+      top: 30px;
+      right: 42px;
+      height: 24px;
+      width: 5px;
+    }
+  }
+
+  img {
+    height: 100%;
+  }
+}
+
 .button {
   padding: 1rem 1.5rem;
   font-size: 0.75rem;

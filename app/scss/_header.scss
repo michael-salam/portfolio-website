@@ -25,37 +25,37 @@
     transform: translateX(-50%);
     transition: all 300ms ease-in-out;
 
-    &__logo {
-      position: relative;
-      height: 3.5rem;
-      //   height: 6.875rem;
+    // &__logo {
+    //   position: relative;
+    //   height: 3.5rem;
+    //   //   height: 6.875rem;
 
-      @include breakpoint-up(large) {
-        height: 5.25rem;
-      }
+    //   @include breakpoint-up(large) {
+    //     height: 5.25rem;
+    //   }
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        height: 16px;
-        width: 3px;
-        background-color: $primaryDark;
-        animation: pulse 350ms ease-in-out alternate infinite;
+    //   &::after {
+    //     content: "";
+    //     position: absolute;
+    //     top: 20px;
+    //     right: 30px;
+    //     height: 16px;
+    //     width: 3px;
+    //     background-color: $primaryDark;
+    //     animation: pulse 350ms ease-in-out alternate infinite;
 
-        @include breakpoint-up(large) {
-          top: 30px;
-          right: 42px;
-          height: 24px;
-          width: 5px;
-        }
-      }
+    //     @include breakpoint-up(large) {
+    //       top: 30px;
+    //       right: 42px;
+    //       height: 24px;
+    //       width: 5px;
+    //     }
+    //   }
 
-      img {
-        height: 100%;
-      }
-    }
+    //   img {
+    //     height: 100%;
+    //   }
+    // }
 
     &__menu-icon {
       height: 40px;
