@@ -130,7 +130,7 @@ a.link:hover {
   right: 30px;
   height: 16px;
   width: 3px;
-  background-color: #ffffff;
+  background-color: #312a41;
   -webkit-animation: pulse 350ms ease-in-out alternate infinite;
           animation: pulse 350ms ease-in-out alternate infinite;
 }
